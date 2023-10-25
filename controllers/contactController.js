@@ -1,9 +1,9 @@
-const contactModel = require('../models/contactModel.js')
+const ContactForm = require('../models/contactModel.js')
 
 const contact = async (req, res) => {
   const { name, phone, email, subject, message } = req.body
 
-  const newContact = new contactModel({ name, phone, email, subject, message })
+  const newContact = new ContactForm({ name, phone, email, subject, message })
 
   try {
     await newContact.save()
